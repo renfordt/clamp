@@ -29,4 +29,12 @@ final class ClampTest extends TestCase
     {
         $this->assertSame($expected, clamp($value, $min, $max));
     }
+
+    /**
+     * @dataProvider dataProviderForClampTest
+     */
+    public function testClampMinMax($value, $min, $max, $expected): void
+    {
+        $this->assertSame($expected, clampMinMax($value, $min, $max));
+    }
 }
