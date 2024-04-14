@@ -38,7 +38,9 @@ final class ClampTest extends TestCase
         $this->assertSame($expected, clampMinMax($value, $min, $max));
     }
 
-    public function testIfFunctionExists() {
+    public function testIfFunctionExists()
+    {
         $this->assertTrue(function_exists('clamp'), 'Function clamp does not exist');
+        $this->assertTrue(function_exists('clampMinMax'), 'Function clampMinMax does not exist');
     }
 }
