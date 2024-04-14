@@ -23,7 +23,7 @@ final class ClampTest extends TestCase
     }
 
     /**
-     * @dataProvider dataProviderForClampTest[
+     * @dataProvider dataProviderForClampTest
      */
     public function testClamp($value, $min, $max, $expected): void
     {
