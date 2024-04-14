@@ -1,24 +1,24 @@
 {
-    "name": "renfordt/clamp",
-    "description": "Adds the support of the method clamp() for PHP.",
-    "type": "library",
-    "require": {
-        "php": "^8.1"
-    },
-    "require-dev": {
-        "phpunit/phpunit": "^10.5"
-    },
-    "license": "MIT",
-    "autoload": {
-        "psr-4": {
-            "Renfordt\\Clamp\\": "src/"
-        }
-    },
-    "authors": [
-        {
-            "name": "Jannik Renfordt",
-            "email": "jannik.renfordt@ikobb.de"
-        }
-    ],
-    "minimum-stability": "stable"
+  "name": "renfordt/clamp",
+  "description": "Adds the support of the method clamp() for PHP.",
+  "type": "library",
+  "require": {
+    "php": "^8.1"
+  },
+  "require-dev": {
+    "phpunit/phpunit": "^10.5"
+  },
+  "license": "MIT",
+  "autoload": {
+    "files": [
+      "src/Clamp.php"
+    ]
+  },
+  "authors": [
+    {
+      "name": "Jannik Renfordt",
+      "email": "jannik.renfordt@ikobb.de"
+    }
+  ],
+  "minimum-stability": "stable"
 }
