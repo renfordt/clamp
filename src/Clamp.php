@@ -14,8 +14,7 @@ if (!function_exists('clamp')) {
     {
         if ($value > $max) {
             return $max;
-        }
-        if ($value < $min) {
+        } elseif ($value < $min) {
             return $min;
         }
         return $value;
