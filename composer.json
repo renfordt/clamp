@@ -8,7 +8,10 @@
   "require-dev": {
     "phpunit/phpunit": "^10.5",
     "friendsofphp/php-cs-fixer": "^3.65",
-    "phpstan/phpstan": "^2.0"
+    "phpstan/phpstan": "^2.0",
+    "laravel/pint": "^1.19",
+    "symfony/var-dumper": "^7.2",
+    "rector/rector": "^2.0"
   },
   "license": "MIT",
   "autoload": {
@@ -22,5 +25,19 @@
       "email": "jannik.renfordt@ikobb.de"
     }
   ],
-  "minimum-stability": "stable"
+  "minimum-stability": "stable",
+  "scripts": {
+    "refacto": "rector",
+    "lint": "pint",
+    "test:refacto": "rector --dry-run",
+    "test:lint": "pint --test",
+    "test:types": "phpstan analyse --ansi",
+    "test:unit": "phpunit",
+    "test": [
+      "@test:refacto",
+      "@test:lint",
+      "@test:types",
+      "@test:unit"
+    ]
+  }
 }
