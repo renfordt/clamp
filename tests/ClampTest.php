@@ -1,9 +1,15 @@
 <?php
 
-namespace test;
+declare(strict_types=1);
 
+namespace tests;
+
+use PHPUnit\Framework\Attributes\CoversFunction;
+use PHPUnit\Framework\Attributes\DataProvider;
 use PHPUnit\Framework\TestCase;
 
+#[CoversFunction('clamp')]
+#[CoversFunction('clampMinMax')]
 final class ClampTest extends TestCase
 {
     public static function dataProviderForClampTest(): array
@@ -22,23 +28,19 @@ final class ClampTest extends TestCase
         ];
     }
 
-    /**
-     * @dataProvider dataProviderForClampTest
-     */
-    public function testClamp($value, $min, $max, $expected): void
+    #[DataProvider('dataProviderForClampTest')]
+    public function test_clamp(int|float|string $value, int|float|string $min, int|float|string $max, int|float|string $expected): void
     {
         $this->assertSame($expected, clamp($value, $min, $max));
     }
 
-    /**
-     * @dataProvider dataProviderForClampTest
-     */
-    public function testClampMinMax($value, $min, $max, $expected): void
+    #[DataProvider('dataProviderForClampTest')]
+    public function test_clamp_min_max(int|float|string $value, int|float|string $min, int|float|string $max, int|float|string $expected): void
     {
         $this->assertSame($expected, clampMinMax($value, $min, $max));
     }
 
-    public function testIfFunctionExists()
+    public function test_if_function_exists(): void
     {
         $this->assertTrue(function_exists('clamp'), 'Function clamp does not exist');
         $this->assertTrue(function_exists('clampMinMax'), 'Function clampMinMax does not exist');
