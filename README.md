@@ -7,8 +7,8 @@ Adds the support of the mathematical method clamp() for PHP.
 ![Packagist PHP Version](https://img.shields.io/packagist/dependency-v/renfordt/clamp/php)
 ![GitHub License](https://img.shields.io/github/license/renfordt/clamp)
 ![GitHub Actions Workflow Status](https://img.shields.io/github/actions/workflow/status/renfordt/clamp/tests.yml?logo=github)
-[![Code Climate coverage](https://img.shields.io/codeclimate/coverage/renfordt/clamp?logo=codeclimate)](https://codeclimate.com/github/renfordt/clamp/test_coverage)
-[![Code Climate maintainability](https://img.shields.io/codeclimate/maintainability/renfordt/clamp?logo=codeclimate)](https://codeclimate.com/github/renfordt/clamp/maintainability)
+[![Code Coverage](https://qlty.sh/gh/renfordt/projects/clamp/coverage.svg)](https://qlty.sh/gh/renfordt/projects/clamp)
+[![Maintainability](https://qlty.sh/gh/renfordt/projects/clamp/maintainability.svg)](https://qlty.sh/gh/renfordt/projects/clamp)
 
 ## Installation
 
